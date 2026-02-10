@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Rear wheels -->
+  <circle cx="11" cy="49" r="9"/>
+  <circle cx="11" cy="49" r="5"/>
+  <circle cx="11" cy="49" r="1.5" fill="currentColor"/>
+  <line x1="11" y1="40" x2="11" y2="44"/>
+  <line x1="11" y1="54" x2="11" y2="58"/>
+  <line x1="2" y1="49" x2="6" y2="49"/>
+  <line x1="16" y1="49" x2="20" y2="49"/>
+  <!-- Front wheels -->
+  <circle cx="53" cy="49" r="9"/>
+  <circle cx="53" cy="49" r="5"/>
+  <circle cx="53" cy="49" r="1.5" fill="currentColor"/>
+  <line x1="53" y1="40" x2="53" y2="44"/>
+  <line x1="53" y1="54" x2="53" y2="58"/>
+  <line x1="44" y1="49" x2="48" y2="49"/>
+  <line x1="58" y1="49" x2="62" y2="49"/>
+  <!-- Chassis -->
+  <path d="M20 46 L22 38 L42 38 L44 46"/>
+  <line x1="22" y1="42" x2="42" y2="42"/>
+  <!-- Roll cage - main pillars -->
+  <path d="M22 38 L24 18 L40 18 L42 38" stroke-width="2"/>
+  <!-- Roll cage - A-pillars (front) -->
+  <path d="M40 18 L46 32 L44 38"/>
+  <!-- Roll cage - rear -->
+  <path d="M24 18 L20 32 L22 38"/>
+  <!-- Roof bars -->
+  <line x1="24" y1="18" x2="40" y2="18" stroke-width="2.2"/>
+  <line x1="26" y1="22" x2="38" y2="22" stroke-width="1.2"/>
+  <!-- Cross brace on roll cage -->
+  <line x1="24" y1="18" x2="42" y2="38" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <line x1="40" y1="18" x2="22" y2="38" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <!-- Seats -->
+  <path d="M27 36 L27 30 Q28 28 30 28 L30 36" stroke-width="1.2"/>
+  <path d="M33 36 L33 30 Q34 28 36 28 L36 36" stroke-width="1.2"/>
+  <!-- Steering wheel -->
+  <circle cx="38" cy="30" r="3" stroke-width="1.2"/>
+  <line x1="38" y1="33" x2="38" y2="36"/>
+  <!-- Headlights -->
+  <circle cx="46" cy="36" r="1.8" fill="currentColor" opacity="0.3"/>
+  <circle cx="46" cy="36" r="0.8"/>
+  <!-- Taillights -->
+  <rect x="19" y="35" width="2" height="3" rx="0.5" fill="currentColor" opacity="0.3"/>
+  <!-- Front bumper -->
+  <path d="M44 40 L48 38 L50 40" stroke-width="2"/>
+  <!-- Rear bumper -->
+  <path d="M20 40 L16 38 L14 40" stroke-width="2"/>
+  <!-- Suspension arms -->
+  <path d="M20 46 L14 44" stroke-width="1.5"/>
+  <path d="M44 46 L50 44" stroke-width="1.5"/>
+  <!-- Skid plate -->
+  <line x1="26" y1="46" x2="38" y2="46" stroke-width="1.2"/>
+  <!-- Shock absorbers -->
+  <path d="M18 40 L16 44" stroke-width="2.5" opacity="0.4"/>
+  <path d="M46 40 L48 44" stroke-width="2.5" opacity="0.4"/>
+</svg>

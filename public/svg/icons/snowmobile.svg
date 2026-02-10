@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Track/caterpillar -->
+  <path d="M10 50 Q10 44 16 44 L48 44 Q54 44 54 50 Q54 54 48 54 L16 54 Q10 54 10 50Z" stroke-width="1.5"/>
+  <!-- Track teeth -->
+  <line x1="18" y1="44" x2="18" y2="54"/>
+  <line x1="24" y1="44" x2="24" y2="54"/>
+  <line x1="30" y1="44" x2="30" y2="54"/>
+  <line x1="36" y1="44" x2="36" y2="54"/>
+  <line x1="42" y1="44" x2="42" y2="54"/>
+  <line x1="48" y1="44.5" x2="48" y2="53.5"/>
+  <!-- Track drive wheels -->
+  <circle cx="15" cy="49" r="4" stroke-width="1.2"/>
+  <circle cx="15" cy="49" r="1.5" fill="currentColor"/>
+  <circle cx="49" cy="49" r="4" stroke-width="1.2"/>
+  <circle cx="49" cy="49" r="1.5" fill="currentColor"/>
+  <!-- Track rollers -->
+  <circle cx="27" cy="53" r="2"/>
+  <circle cx="37" cy="53" r="2"/>
+  <!-- Body / hull -->
+  <path d="M14 44 L12 38 L16 30 L26 24 L40 22 L50 26 L54 34 L54 44" stroke-width="2"/>
+  <!-- Body panel detail -->
+  <path d="M20 38 L22 32 L36 28 L46 30 L50 36" stroke-width="1" opacity="0.5"/>
+  <!-- Windshield -->
+  <path d="M26 24 L22 14 L30 10 L38 12 L40 22" stroke-width="1.5"/>
+  <!-- Windshield glare -->
+  <line x1="26" y1="18" x2="32" y2="14" stroke-width="0.8" opacity="0.4"/>
+  <!-- Seat -->
+  <path d="M38 22 L38 18 Q40 16 44 16 L48 18 L50 22 Q50 26 48 28 L42 28 Q40 26 40 24Z" stroke-width="1.5"/>
+  <!-- Seat detail -->
+  <line x1="42" y1="18" x2="42" y2="26" stroke-width="0.8" opacity="0.4"/>
+  <!-- Handlebars -->
+  <path d="M26 24 L22 18"/>
+  <path d="M28 22 L32 16"/>
+  <line x1="20" y1="18" x2="24" y2="18" stroke-width="2"/>
+  <line x1="30" y1="16" x2="34" y2="16" stroke-width="2"/>
+  <!-- Handlebar grips -->
+  <circle cx="20" cy="18" r="1.2" fill="currentColor"/>
+  <circle cx="34" cy="16" r="1.2" fill="currentColor"/>
+  <!-- Front ski -->
+  <path d="M2 54 L4 50 L12 50 L14 48" stroke-width="2"/>
+  <path d="M2 54 L10 54" stroke-width="1"/>
+  <!-- Ski runner -->
+  <line x1="2" y1="55" x2="10" y2="55" stroke-width="2.5" opacity="0.3"/>
+  <!-- Headlight -->
+  <circle cx="22" cy="16" r="2" fill="currentColor" opacity="0.3"/>
+  <circle cx="22" cy="16" r="1"/>
+  <!-- Taillight -->
+  <rect x="51" y="27" width="2.5" height="2" rx="0.5" fill="currentColor" opacity="0.3"/>
+  <!-- Exhaust -->
+  <path d="M52 30 L56 28 L58 30" stroke-width="1.5"/>
+  <!-- Snow spray suggestion -->
+  <path d="M56 48 Q58 46 60 48" stroke-width="0.8" opacity="0.3"/>
+  <path d="M58 50 Q60 48 62 50" stroke-width="0.8" opacity="0.3"/>
+</svg>

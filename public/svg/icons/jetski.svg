@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Water surface -->
+  <path d="M0 48 Q8 45 16 48 Q24 51 32 48 Q40 45 48 48 Q56 51 64 48" stroke-width="1" opacity="0.25"/>
+  <path d="M0 52 Q8 49 16 52 Q24 55 32 52 Q40 49 48 52 Q56 55 64 52" stroke-width="0.8" opacity="0.15"/>
+  <!-- Hull bottom -->
+  <path d="M6 44 Q10 50 32 50 Q54 50 58 44" stroke-width="2"/>
+  <!-- Hull body -->
+  <path d="M6 44 L8 38 L14 32 L24 26 L36 24 L46 26 L52 32 L56 38 L58 44" stroke-width="2"/>
+  <!-- Hull deck line -->
+  <path d="M12 38 L18 32 L28 28 L38 26 L48 28 L54 34" stroke-width="1" opacity="0.4"/>
+  <!-- Bow/nose detail -->
+  <path d="M8 38 L12 34 L16 38" stroke-width="1.2" opacity="0.5"/>
+  <!-- Seat back -->
+  <path d="M28 26 L28 20 Q30 17 34 17 Q38 17 38 20 L38 24" stroke-width="1.5"/>
+  <!-- Seat cushion -->
+  <path d="M26 28 Q26 24 30 24 L40 24 Q44 24 44 28" stroke-width="1.5"/>
+  <!-- Seat detail line -->
+  <line x1="34" y1="17" x2="34" y2="24" stroke-width="0.8" opacity="0.4"/>
+  <!-- Handlebars -->
+  <path d="M26 26 L22 20"/>
+  <path d="M28 24 L30 18"/>
+  <line x1="20" y1="20" x2="24" y2="20" stroke-width="2"/>
+  <line x1="28" y1="18" x2="32" y2="18" stroke-width="2"/>
+  <!-- Handlebar grips -->
+  <circle cx="20" cy="20" r="1.2" fill="currentColor"/>
+  <circle cx="32" cy="18" r="1.2" fill="currentColor"/>
+  <!-- Instrument cluster -->
+  <rect x="24" y="21" width="4" height="2.5" rx="0.8" stroke-width="1"/>
+  <!-- Jet nozzle / rear -->
+  <path d="M52 32 L58 28 L60 32 L58 36 L54 36" stroke-width="1.5"/>
+  <!-- Nozzle inner -->
+  <line x1="56" y1="30" x2="56" y2="34" stroke-width="1" opacity="0.5"/>
+  <!-- Intake grate -->
+  <path d="M38 48 L42 48" stroke-width="1.2"/>
+  <path d="M40 46 L44 46" stroke-width="1.2"/>
+  <path d="M42 44 L46 44" stroke-width="1.2"/>
+  <!-- Headlight -->
+  <circle cx="14" cy="34" r="2" fill="currentColor" opacity="0.3"/>
+  <circle cx="14" cy="34" r="0.8"/>
+  <!-- Mirrors -->
+  <path d="M22 20 L18 18 L17 20" stroke-width="1"/>
+  <path d="M32 18 L36 16 L37 18" stroke-width="1"/>
+  <!-- Side vent -->
+  <line x1="44" y1="30" x2="48" y2="30" stroke-width="1" opacity="0.4"/>
+  <line x1="44" y1="32" x2="50" y2="32" stroke-width="1" opacity="0.4"/>
+  <line x1="44" y1="34" x2="50" y2="34" stroke-width="1" opacity="0.4"/>
+  <!-- Spray/wake -->
+  <path d="M4 46 Q2 42 4 40" stroke-width="1" opacity="0.3"/>
+  <path d="M60 38 L62 36" stroke-width="1.5" opacity="0.3"/>
+  <path d="M60 40 L63 39" stroke-width="1" opacity="0.2"/>
+  <!-- Waterline reflection -->
+  <path d="M10 50 Q20 47 32 49 Q44 51 54 48" stroke-width="0.6" opacity="0.2" stroke-dasharray="3 2"/>
+</svg>

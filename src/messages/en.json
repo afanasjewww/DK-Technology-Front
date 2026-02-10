@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "rental": "Rental",
+    "service": "Service",
+    "about": "About",
+    "promotions": "Deals",
+    "configurator": "Configurator",
+    "contacts": "Contacts",
+    "account": "Account",
+    "login": "Sign In"
+  },
+  "home": {
+    "hero": {
+      "title": "World of Powerful Machines",
+      "subtitle": "Sales and rental of BRP and Polaris vehicles in Russia",
+      "cta_catalog": "View Catalog",
+      "cta_rental": "Rent Now"
+    },
+    "categories": {
+      "title": "Vehicle Categories",
+      "subtitle": "Choose your type of adventure",
+      "atv": "ATVs",
+      "atv_desc": "Powerful ATVs for off-road and outdoor adventures",
+      "buggy": "Buggies",
+      "buggy_desc": "High-speed UTVs for extreme adventures",
+      "snowmobile": "Snowmobiles",
+      "snowmobile_desc": "Reliable machines for winter trails",
+      "jetski": "Jet Skis",
+      "jetski_desc": "Speed and excitement on the water"
+    },
+    "featured": {
+      "title": "Popular Models",
+      "subtitle": "Best offers from BRP and Polaris",
+      "view_all": "View All"
+    },
+    "why": {
+      "title": "Why DK Tech?",
+      "subtitle": "Your trusted partner in powersports",
+      "years": "years in business",
+      "vehicles_sold": "vehicles sold",
+      "clients": "happy clients",
+      "service_points": "service centers",
+      "advantage1_title": "Authorized Dealer",
+      "advantage1_desc": "Official BRP and Polaris dealer with full warranty service",
+      "advantage2_title": "Best Prices",
+      "advantage2_desc": "Competitive pricing and flexible financing on all vehicles",
+      "advantage3_title": "Professional Service",
+      "advantage3_desc": "In-house service center with certified technicians",
+      "advantage4_title": "Nationwide Delivery",
+      "advantage4_desc": "We deliver vehicles to any city in Russia"
+    },
+    "promo": {
+      "title": "Special Offer",
+      "subtitle": "Up to 15% off Can-Am ATVs",
+      "cta": "Learn More"
+    },
+    "partners": {
+      "title": "Our Brands",
+      "subtitle": "Authorized dealer of leading manufacturers"
+    }
+  },
+  "catalog": {
+    "title": "Vehicle Catalog",
+    "subtitle": "Find your perfect machine",
+    "filters": "Filters",
+    "type": "Vehicle Type",
+    "brand": "Brand",
+    "price_range": "Price Range",
+    "price_from": "Price from",
+    "price_to": "Price to",
+    "apply": "Apply",
+    "reset": "Reset",
+    "no_results": "No vehicles found matching your criteria",
+    "details": "Details",
+    "in_stock": "In Stock",
+    "out_of_stock": "On Order",
+    "rent_available": "Available for Rent",
+    "order_call": "Request a Call",
+    "specs": "Specifications",
+    "related": "Related Models",
+    "all_types": "All Types",
+    "all_brands": "All Brands"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "DK Tech - your path to adventure",
+    "story_title": "Our Story",
+    "story_text": "DK Tech was founded with one goal - to make world-class powersports vehicles accessible to Russian outdoor enthusiasts. We are an authorized dealer of BRP and Polaris, offering a full range of services from new vehicle sales to professional service maintenance.",
+    "mission_title": "Our Mission",
+    "mission_text": "We believe everyone deserves the opportunity to experience real adventures. Our team of professionals will help you find the vehicle that is perfect for you.",
+    "advantages_title": "Our Advantages",
+    "team_title": "Our Team"
+  },
+  "rental": {
+    "title": "Vehicle Rental",
+    "subtitle": "Experience BRP and Polaris without buying",
+    "conditions_title": "Rental Terms",
+    "pricing_title": "Rental Pricing",
+    "hourly": "Hour",
+    "daily": "Day",
+    "weekly": "Week",
+    "deposit": "Deposit",
+    "booking_title": "Book a Vehicle",
+    "booking_name": "Your Name",
+    "booking_phone": "Phone",
+    "booking_email": "Email",
+    "booking_type": "Vehicle Type",
+    "booking_start": "Start Date",
+    "booking_end": "End Date",
+    "booking_message": "Message",
+    "booking_submit": "Submit Request",
+    "booking_success": "Request submitted! We will contact you shortly."
+  },
+  "service": {
+    "title": "Service & Maintenance",
+    "subtitle": "Professional care for your vehicle",
+    "cta": "Book a Service"
+  },
+  "contacts": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Working Hours",
+    "form_title": "Send us a message",
+    "form_name": "Your Name",
+    "form_phone": "Phone",
+    "form_email": "Email",
+    "form_subject": "Subject",
+    "form_message": "Message",
+    "form_submit": "Send",
+    "form_success": "Message sent! We will reply shortly."
+  },
+  "promotions": {
+    "title": "Deals & Special Offers",
+    "subtitle": "Great deals on BRP and Polaris vehicles",
+    "valid_until": "Valid until",
+    "details": "Learn More"
+  },
+  "configurator": {
+    "title": "Vehicle Configurator",
+    "subtitle": "Build your perfect machine",
+    "coming_soon": "Coming Soon",
+    "description": "Our step-by-step configurator will let you choose vehicle type, brand, model, and additional equipment. See the final price and submit your request.",
+    "step1": "Choose vehicle type",
+    "step2": "Choose brand",
+    "step3": "Choose model",
+    "step4": "Add options",
+    "step5": "Get your quote",
+    "notify": "Be the first to know when it launches",
+    "notify_placeholder": "Your email",
+    "notify_submit": "Subscribe"
+  },
+  "account": {
+    "title": "My Account",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "orders": "My Orders",
+    "favorites": "Favorites",
+    "configurations": "My Configurations",
+    "logout": "Sign Out",
+    "login_title": "Sign In",
+    "register_title": "Create Account",
+    "login_email": "Email",
+    "login_password": "Password",
+    "login_submit": "Sign In",
+    "register_submit": "Create Account",
+    "no_account": "Don't have an account?",
+    "has_account": "Already have an account?",
+    "register_link": "Create one",
+    "login_link": "Sign in"
+  },
+  "common": {
+    "learn_more": "Learn More",
+    "view_details": "View Details",
+    "back": "Back",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "from": "from",
+    "per_day": "/ day",
+    "currency": "₽",
+    "close": "Close",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "scroll_down": "Scroll down",
+    "all": "All",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "footer": {
+    "description": "Authorized BRP and Polaris dealer in Russia. Sales, rental, and service of powersports vehicles.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "contacts": "Contacts",
+    "copyright": "© {year} DK Tech. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "cookie": {
+    "message": "We use cookies to improve your experience.",
+    "accept": "Accept",
+    "settings": "Settings"
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "subtitle": "Sorry, the page you are looking for does not exist",
+    "home": "Go to Homepage"
+  }
+}

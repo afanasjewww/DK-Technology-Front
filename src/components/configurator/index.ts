@@ -1,0 +1,1 @@
+export { ConfiguratorPlaceholder } from './ConfiguratorPlaceholder';
