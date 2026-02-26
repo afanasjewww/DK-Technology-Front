@@ -1,15 +1,16 @@
 import type { NavItem, ContactInfo } from '@/types';
 
-export const SITE_NAME = 'DK Tech';
-export const SITE_DESCRIPTION = 'DK Tech - продажа и аренда техники BRP и Polaris в России. Квадроциклы, багги, снегоходы, водные мотоциклы.';
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dk-tech.ru';
+export const SITE_NAME = 'DK Techno';
+export const SITE_DESCRIPTION = 'DK Techno - продажа и аренда техники BRP и Polaris в России. Квадроциклы, багги, снегоходы, водные мотоциклы.';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brp-russia.ru';
+export const COMPANY_LEGAL_NAME = 'ДК ТЕХНОЛОДЖИС, ООО';
 
 export const CONTACT_INFO: ContactInfo = {
-  phone: '+7 (800) 555-35-35',
-  email: 'info@dk-tech.ru',
-  address: 'г. Москва, ул. Примерная, д. 1',
+  phone: '+7 (921) 758-69-68',
+  email: 'office@dk-tehno.ru',
+  address: 'г. Санкт-Петербург, 3-ий Верхний переулок, д. 5М',
   workingHours: 'Пн-Пт: 9:00-20:00, Сб-Вс: 10:00-18:00',
-  whatsapp: '+78005553535',
+  whatsapp: '+79217586968',
   telegram: '@dktech',
 };
 

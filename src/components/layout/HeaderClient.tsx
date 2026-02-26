@@ -40,7 +40,7 @@ export function HeaderClient() {
             <Link href="/" className="flex items-center gap-2 shrink-0">
               <div className="flex items-center">
                 <span className="text-2xl font-bold text-white font-heading">
-                  DK<span className="text-dk-red-500"> Tech</span>
+                  DK<span className="text-dk-red-500"> Techno</span>
                 </span>
               </div>
             </Link>

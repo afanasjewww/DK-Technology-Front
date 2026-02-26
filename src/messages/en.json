@@ -36,7 +36,7 @@
       "view_all": "View All"
     },
     "why": {
-      "title": "Why DK Tech?",
+      "title": "Why DK Techno?",
       "subtitle": "Your trusted partner in powersports",
       "years": "years in business",
       "vehicles_sold": "vehicles sold",
@@ -85,9 +85,9 @@
   },
   "about": {
     "title": "About Us",
-    "subtitle": "DK Tech - your path to adventure",
+    "subtitle": "DK Techno - your path to adventure",
     "story_title": "Our Story",
-    "story_text": "DK Tech was founded with one goal - to make world-class powersports vehicles accessible to Russian outdoor enthusiasts. We are an authorized dealer of BRP and Polaris, offering a full range of services from new vehicle sales to professional service maintenance.",
+    "story_text": "DK Techno was founded with one goal - to make world-class powersports vehicles accessible to Russian outdoor enthusiasts. We are an authorized dealer of BRP and Polaris, offering a full range of services from new vehicle sales to professional service maintenance.",
     "mission_title": "Our Mission",
     "mission_text": "We believe everyone deserves the opportunity to experience real adventures. Our team of professionals will help you find the vehicle that is perfect for you.",
     "advantages_title": "Our Advantages",
@@ -191,11 +191,11 @@
     "email": "Email"
   },
   "footer": {
-    "description": "Authorized BRP and Polaris dealer in Russia. Sales, rental, and service of powersports vehicles.",
+    "description": "DK Techno (ДК ТЕХНОЛОДЖИС, ООО) — Authorized BRP and Polaris dealer in Russia. Sales, rental, and service of powersports vehicles.",
     "navigation": "Navigation",
     "services": "Services",
     "contacts": "Contacts",
-    "copyright": "© {year} DK Tech. All rights reserved.",
+    "copyright": "© {year} DK Techno (ДК ТЕХНОЛОДЖИС, ООО). All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   },

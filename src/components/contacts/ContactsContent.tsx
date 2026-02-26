@@ -40,15 +40,21 @@ export function ContactsContent() {
           <div className="p-6 rounded-2xl bg-dk-gray-50 border border-dk-gray-100 text-center">
             <div className="text-3xl mb-3">📞</div>
             <h3 className="font-bold text-dk-gray-900 mb-1">{t('phone')}</h3>
-            <a href={`tel:${CONTACT_INFO.phone.replace(/[^\d+]/g, '')}`} className="text-sm text-dk-red-500 hover:text-dk-red-600 transition-colors">
+            <a href={`tel:${CONTACT_INFO.phone.replace(/[^\d+]/g, '')}`} className="text-sm text-dk-red-500 hover:text-dk-red-600 transition-colors block">
               {CONTACT_INFO.phone}
+            </a>
+            <a href="tel:+79312881088" className="text-sm text-dk-red-500 hover:text-dk-red-600 transition-colors block">
+              +7 (931) 288-10-88
             </a>
           </div>
           <div className="p-6 rounded-2xl bg-dk-gray-50 border border-dk-gray-100 text-center">
             <div className="text-3xl mb-3">✉️</div>
             <h3 className="font-bold text-dk-gray-900 mb-1">{t('email')}</h3>
-            <a href={`mailto:${CONTACT_INFO.email}`} className="text-sm text-dk-red-500 hover:text-dk-red-600 transition-colors">
+            <a href={`mailto:${CONTACT_INFO.email}`} className="text-sm text-dk-red-500 hover:text-dk-red-600 transition-colors block">
               {CONTACT_INFO.email}
+            </a>
+            <a href="mailto:sales@dk-tehno.ru" className="text-sm text-dk-red-500 hover:text-dk-red-600 transition-colors block">
+              sales@dk-tehno.ru
             </a>
           </div>
           <div className="p-6 rounded-2xl bg-dk-gray-50 border border-dk-gray-100 text-center">

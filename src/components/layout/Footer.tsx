@@ -30,7 +30,7 @@ export async function Footer() {
             <div>
               <Link href="/" className="inline-block mb-4">
                 <span className="text-2xl font-bold text-white font-heading">
-                  DK<span className="text-dk-red-500"> Tech</span>
+                  DK<span className="text-dk-red-500"> Techno</span>
                 </span>
               </Link>
               <p className="text-sm text-dk-gray-400 leading-relaxed">
@@ -92,6 +92,12 @@ export async function Footer() {
                   >
                     <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     {CONTACT_INFO.email}
+                  </a>
+                  <a
+                    href="mailto:sales@dk-tehno.ru"
+                    className="text-sm text-dk-gray-400 hover:text-dk-red-400 transition-colors block ml-6"
+                  >
+                    sales@dk-tehno.ru
                   </a>
                 </li>
                 <li className="text-sm text-dk-gray-400 flex items-center gap-2">
