@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Card, Badge, Button } from '@/components/ui';
 import { StaggerChildren, StaggerItem, HoverScale } from '@/components/motion';
 import { formatPrice, cn } from '@/utils';
 import { BRAND_LABELS } from '@/lib/constants';
+import { useRandomImages, useRandomDescriptions } from '@/hooks/useRandomContent';
 import type { Vehicle, VehicleType, VehicleBrand } from '@/types';
 
 const vehicleTypes: { value: VehicleType | 'all'; label: string }[] = [
@@ -27,6 +29,8 @@ export function CatalogClient({ vehicles }: { vehicles: Vehicle[] }) {
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
   const [selectedBrand, setSelectedBrand] = useState<VehicleBrand | 'all'>('all');
   const t = useTranslations('catalog');
+  const randomImages = useRandomImages(vehicles.length);
+  const randomDescriptions = useRandomDescriptions(vehicles.length);
 
   const filtered = useMemo(() => {
     return vehicles.filter(v => {
@@ -85,25 +89,33 @@ export function CatalogClient({ vehicles }: { vehicles: Vehicle[] }) {
         </div>
       ) : (
         <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map(vehicle => (
+          {filtered.map(vehicle => {
+            const idx = vehicles.findIndex(v => v.id === vehicle.id);
+            return (
             <StaggerItem key={vehicle.id}>
               <HoverScale>
                 <Link href={`/catalog/${vehicle.slug}`}>
                   <Card className="group">
                     <div className="relative h-48 bg-dk-gray-100 overflow-hidden">
-                      <div className="w-full h-full bg-dk-gray-200 flex items-center justify-center">
-                        <svg className="w-16 h-16 text-dk-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>
-                        </svg>
-                      </div>
-                      <div className="absolute top-3 left-3 flex gap-2">
+                      {randomImages[idx] ? (
+                        <Image
+                          src={randomImages[idx]}
+                          alt={vehicle.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-dk-gray-200" />
+                      )}
+                      <div className="absolute top-3 left-3 flex gap-2 z-10">
                         <Badge>{BRAND_LABELS[vehicle.brand]}</Badge>
                         {vehicle.isRentable && <Badge variant="green">Аренда</Badge>}
                       </div>
                     </div>
                     <div className="p-5">
                       <h3 className="font-bold text-dk-gray-900 group-hover:text-dk-red-500 transition-colors mb-1">{vehicle.name}</h3>
-                      <p className="text-sm text-dk-gray-500 line-clamp-2 mb-3">{vehicle.description}</p>
+                      <p className="text-sm text-dk-gray-500 line-clamp-2 mb-3">{randomDescriptions[idx] || vehicle.description}</p>
                       <div className="flex items-center justify-between">
                         <span className="text-xl font-bold text-dk-red-500">{formatPrice(vehicle.price)}</span>
                         <span className="text-sm text-dk-gray-400">{vehicle.year}</span>
@@ -113,7 +125,8 @@ export function CatalogClient({ vehicles }: { vehicles: Vehicle[] }) {
                 </Link>
               </HoverScale>
             </StaggerItem>
-          ))}
+          );
+          })}
         </StaggerChildren>
       )}
     </div>

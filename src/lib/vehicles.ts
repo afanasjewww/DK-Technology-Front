@@ -1,5 +1,46 @@
 import type { Vehicle } from '@/types';
 
+export const VEHICLE_PHOTOS = [
+  '/images/vehicles/pictures/photo_1_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_2_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_3_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_4_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_5_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_6_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_7_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_8_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_9_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_10_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_11_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_12_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_13_2026-02-26_22-04-45.jpg',
+  '/images/vehicles/pictures/photo_1_2026-02-26_22-06-54.jpg',
+  '/images/vehicles/pictures/photo_2_2026-02-26_22-06-54.jpg',
+];
+
+export const VEHICLE_DESCRIPTIONS = [
+  'Надёжная техника для покорения любого бездорожья. Мощный двигатель и усиленная подвеска обеспечивают уверенную езду в самых сложных условиях.',
+  'Создан для настоящих приключений. Современная система полного привода и электронное управление делают каждую поездку незабываемой.',
+  'Премиальная модель с максимальной комплектацией. Спортивный характер сочетается с комфортом для дальних путешествий.',
+  'Универсальная модель для работы и отдыха. Высокая грузоподъёмность и экономичный расход топлива — идеальный баланс.',
+  'Флагман линейки с непревзойдённой динамикой. Турбированный двигатель и адаптивная подвеска для экстремальных нагрузок.',
+  'Компактная и манёвренная модель для новичков и профессионалов. Лёгкое управление и отличная проходимость.',
+  'Топовая комплектация для требовательных райдеров. Усиленная рама, защита днища и мощная лебёдка в стандарте.',
+  'Спортивная модель для скоростных трасс и бездорожья. Агрессивный дизайн и впечатляющая мощность.',
+  'Туристическая модель повышенной комфортности. Мягкая подвеска, подогрев ручек и вместительный багажник.',
+  'Профессиональная техника для экспедиций и долгих маршрутов. Увеличенный запас хода и надёжная конструкция.',
+  'Модель для экстремального катания в горах. Лёгкая платформа и мощный двигатель для глубокого снега.',
+  'Стильный и современный дизайн в сочетании с передовыми технологиями. Лучший выбор сезона.',
+];
+
+export function getRandomImage(): string {
+  return VEHICLE_PHOTOS[Math.floor(Math.random() * VEHICLE_PHOTOS.length)];
+}
+
+export function getRandomDescription(): string {
+  return VEHICLE_DESCRIPTIONS[Math.floor(Math.random() * VEHICLE_DESCRIPTIONS.length)];
+}
+
 export const vehicles: Vehicle[] = [
   {
     id: '1',
@@ -10,7 +51,7 @@ export const vehicles: Vehicle[] = [
     year: 2024,
     price: 1350000,
     rentalPrice: 8000,
-    images: ['/images/vehicles/outlander-700.webp'],
+    images: [VEHICLE_PHOTOS[0]],
     description: 'Мощный квадроцикл для бездорожья с двигателем Rotax 650 куб.см. Идеален для охоты, рыбалки и активного отдыха.',
     specs: {
       engine: 'Rotax 650 куб.см, V-Twin',

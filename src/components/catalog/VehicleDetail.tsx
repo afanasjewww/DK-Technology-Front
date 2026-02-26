@@ -1,11 +1,13 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Button, Badge, Card } from '@/components/ui';
 import { ScrollReveal, HoverScale } from '@/components/motion';
 import { formatPrice } from '@/utils';
 import { BRAND_LABELS } from '@/lib/constants';
+import { useRandomImages, useRandomDescriptions } from '@/hooks/useRandomContent';
 import type { Vehicle } from '@/types';
 
 interface Props {
@@ -15,15 +17,26 @@ interface Props {
 
 export function VehicleDetail({ vehicle, related }: Props) {
   const t = useTranslations('catalog');
+  const randomImages = useRandomImages(1 + related.length);
+  const randomDescriptions = useRandomDescriptions(1);
 
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         {/* Image */}
-        <div className="relative h-64 sm:h-96 bg-dk-gray-100 rounded-2xl overflow-hidden flex items-center justify-center">
-          <svg className="w-24 h-24 text-dk-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>
-          </svg>
+        <div className="relative h-64 sm:h-96 bg-dk-gray-100 rounded-2xl overflow-hidden">
+          {randomImages[0] ? (
+            <Image
+              src={randomImages[0]}
+              alt={vehicle.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
+          ) : (
+            <div className="w-full h-full bg-dk-gray-200" />
+          )}
         </div>
 
         {/* Info */}
@@ -36,7 +49,7 @@ export function VehicleDetail({ vehicle, related }: Props) {
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-bold text-dk-gray-900 mb-2">{vehicle.name}</h1>
-          <p className="text-dk-gray-500 mb-6">{vehicle.description}</p>
+          <p className="text-dk-gray-500 mb-6">{randomDescriptions[0] || vehicle.description}</p>
 
           <div className="text-3xl font-bold text-dk-red-500 mb-6">{formatPrice(vehicle.price)}</div>
 
@@ -75,14 +88,22 @@ export function VehicleDetail({ vehicle, related }: Props) {
         <ScrollReveal>
           <h2 className="text-2xl font-bold text-dk-gray-900 mb-6">{t('related')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {related.map(v => (
+            {related.map((v, i) => (
               <HoverScale key={v.id}>
                 <Link href={`/catalog/${v.slug}`}>
                   <Card className="group">
-                    <div className="h-40 bg-dk-gray-100 flex items-center justify-center">
-                      <svg className="w-12 h-12 text-dk-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                        <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>
-                      </svg>
+                    <div className="relative h-40 bg-dk-gray-100 overflow-hidden">
+                      {randomImages[i + 1] ? (
+                        <Image
+                          src={randomImages[i + 1]}
+                          alt={v.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 640px) 100vw, 33vw"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-dk-gray-200" />
+                      )}
                     </div>
                     <div className="p-4">
                       <h3 className="font-bold group-hover:text-dk-red-500 transition-colors">{v.name}</h3>
