@@ -1,18 +1,18 @@
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Inter, Montserrat } from 'next/font/google';
+import localFont from 'next/font/local';
 import { routing } from '@/i18n/routing';
 import { Header, Footer, CookieConsent, FloatingContacts } from '@/components/layout';
 
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
+const inter = localFont({
+  src: '../../../public/fonts/Inter-Variable.woff2',
   variable: '--font-inter',
   display: 'swap',
 });
 
-const montserrat = Montserrat({
-  subsets: ['latin', 'cyrillic'],
+const montserrat = localFont({
+  src: '../../../public/fonts/Montserrat-Variable.ttf',
   variable: '--font-montserrat',
   display: 'swap',
 });
