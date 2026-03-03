@@ -18,9 +18,9 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                 </svg>
               )}
               {index === items.length - 1 ? (
-                <span className="text-dk-gray-500">{item.label}</span>
+                <span className="text-dk-gray-500 dark:text-dk-gray-400">{item.label}</span>
               ) : (
-                <Link href={item.href} className="text-dk-gray-700 hover:text-dk-red-500 transition-colors">
+                <Link href={item.href} className="text-dk-gray-700 dark:text-dk-gray-300 hover:text-dk-yellow-500 transition-colors">
                   {item.label}
                 </Link>
               )}

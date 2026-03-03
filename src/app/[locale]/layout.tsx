@@ -2,8 +2,10 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import localFont from 'next/font/local';
+import { Rajdhani } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { Header, Footer, CookieConsent, FloatingContacts } from '@/components/layout';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = localFont({
   src: '../../../public/fonts/Inter-Variable.woff2',
@@ -11,9 +13,10 @@ const inter = localFont({
   display: 'swap',
 });
 
-const montserrat = localFont({
-  src: '../../../public/fonts/Montserrat-Variable.ttf',
-  variable: '--font-montserrat',
+const rajdhani = Rajdhani({
+  weight: ['500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-rajdhani',
   display: 'swap',
 });
 
@@ -38,14 +41,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${montserrat.variable}`}>
-      <body className="min-h-screen flex flex-col">
+    <html lang={locale} className={`${inter.variable} ${rajdhani.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-dk-gray-50 dark:bg-dk-gray-950 text-dk-gray-900 dark:text-dk-gray-100 transition-colors duration-300">
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <FloatingContacts />
-          <CookieConsent />
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <FloatingContacts />
+            <CookieConsent />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

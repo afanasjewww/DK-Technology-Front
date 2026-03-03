@@ -1,15 +1,16 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Bike, Tag, ClipboardList, Settings, CheckCircle, type LucideIcon } from 'lucide-react';
 import { Badge, Button, Input, Container } from '@/components/ui';
 import { ScrollReveal, StaggerChildren, StaggerItem } from '@/components/motion';
 
-const steps = [
-  { key: 'step1', icon: '🏍️' },
-  { key: 'step2', icon: '🏷️' },
-  { key: 'step3', icon: '📋' },
-  { key: 'step4', icon: '⚙️' },
-  { key: 'step5', icon: '✅' },
+const steps: { key: string; icon: LucideIcon }[] = [
+  { key: 'step1', icon: Bike },
+  { key: 'step2', icon: Tag },
+  { key: 'step3', icon: ClipboardList },
+  { key: 'step4', icon: Settings },
+  { key: 'step5', icon: CheckCircle },
 ];
 
 export function ConfiguratorPlaceholder() {
@@ -34,10 +35,10 @@ export function ConfiguratorPlaceholder() {
           {steps.map((step, i) => (
             <StaggerItem key={step.key}>
               <div className="p-6 rounded-2xl bg-dk-gray-50 border border-dk-gray-100 text-center relative">
-                <div className="absolute -top-3 -left-3 w-8 h-8 bg-dk-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                <div className="absolute -top-3 -left-3 w-8 h-8 bg-dk-yellow-500 text-dk-gray-950 rounded-full flex items-center justify-center text-sm font-bold">
                   {i + 1}
                 </div>
-                <div className="text-3xl mb-3">{step.icon}</div>
+                <step.icon className="w-8 h-8 mx-auto mb-3 text-dk-gray-500 dark:text-dk-gray-400" strokeWidth={1.5} />
                 <p className="text-sm font-medium text-dk-gray-700">{t(step.key)}</p>
               </div>
             </StaggerItem>

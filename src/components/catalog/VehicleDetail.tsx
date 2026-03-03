@@ -24,7 +24,7 @@ export function VehicleDetail({ vehicle, related }: Props) {
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         {/* Image */}
-        <div className="relative h-64 sm:h-96 bg-dk-gray-100 rounded-2xl overflow-hidden">
+        <div className="relative h-64 sm:h-96 bg-dk-gray-100 dark:bg-dk-gray-800 rounded-2xl overflow-hidden">
           {randomImages[0] ? (
             <Image
               src={randomImages[0]}
@@ -48,14 +48,14 @@ export function VehicleDetail({ vehicle, related }: Props) {
             </Badge>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-dk-gray-900 mb-2">{vehicle.name}</h1>
-          <p className="text-dk-gray-500 mb-6">{randomDescriptions[0] || vehicle.description}</p>
+          <h1 className="text-3xl sm:text-4xl font-bold text-dk-gray-900 dark:text-white mb-2">{vehicle.name}</h1>
+          <p className="text-dk-gray-500 dark:text-dk-gray-400 mb-6">{randomDescriptions[0] || vehicle.description}</p>
 
-          <div className="text-3xl font-bold text-dk-red-500 mb-6">{formatPrice(vehicle.price)}</div>
+          <div className="text-3xl font-bold text-dk-yellow-500 mb-6">{formatPrice(vehicle.price)}</div>
 
           {vehicle.isRentable && (
-            <p className="text-sm text-dk-gray-500 mb-6">
-              Аренда: <span className="font-semibold text-dk-gray-700">{formatPrice(vehicle.rentalPrice)}</span> / сутки
+            <p className="text-sm text-dk-gray-500 dark:text-dk-gray-400 mb-6">
+              Аренда: <span className="font-semibold text-dk-gray-700 dark:text-dk-gray-200">{formatPrice(vehicle.rentalPrice)}</span> / сутки
             </p>
           )}
 
@@ -70,12 +70,12 @@ export function VehicleDetail({ vehicle, related }: Props) {
 
           {/* Specs */}
           <div>
-            <h2 className="text-xl font-bold text-dk-gray-900 mb-4">{t('specs')}</h2>
+            <h2 className="text-xl font-bold text-dk-gray-900 dark:text-white mb-4">{t('specs')}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {Object.entries(vehicle.specs).map(([key, value]) => (
-                <div key={key} className="flex justify-between p-3 bg-dk-gray-50 rounded-lg">
-                  <span className="text-sm text-dk-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1')}</span>
-                  <span className="text-sm font-semibold text-dk-gray-900">{value}</span>
+                <div key={key} className="flex justify-between p-3 bg-dk-gray-50 dark:bg-dk-gray-800 rounded-lg">
+                  <span className="text-sm text-dk-gray-500 dark:text-dk-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1')}</span>
+                  <span className="text-sm font-semibold text-dk-gray-900 dark:text-white">{value}</span>
                 </div>
               ))}
             </div>
@@ -86,13 +86,13 @@ export function VehicleDetail({ vehicle, related }: Props) {
       {/* Related */}
       {related.length > 0 && (
         <ScrollReveal>
-          <h2 className="text-2xl font-bold text-dk-gray-900 mb-6">{t('related')}</h2>
+          <h2 className="text-2xl font-bold text-dk-gray-900 dark:text-white mb-6">{t('related')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {related.map((v, i) => (
               <HoverScale key={v.id}>
                 <Link href={`/catalog/${v.slug}`}>
                   <Card className="group">
-                    <div className="relative h-40 bg-dk-gray-100 overflow-hidden">
+                    <div className="relative h-40 bg-dk-gray-100 dark:bg-dk-gray-800 overflow-hidden">
                       {randomImages[i + 1] ? (
                         <Image
                           src={randomImages[i + 1]}
@@ -106,8 +106,8 @@ export function VehicleDetail({ vehicle, related }: Props) {
                       )}
                     </div>
                     <div className="p-4">
-                      <h3 className="font-bold group-hover:text-dk-red-500 transition-colors">{v.name}</h3>
-                      <p className="text-lg font-bold text-dk-red-500 mt-1">{formatPrice(v.price)}</p>
+                      <h3 className="font-bold text-dk-gray-900 dark:text-white group-hover:text-dk-yellow-500 transition-colors">{v.name}</h3>
+                      <p className="text-lg font-bold text-dk-yellow-500 mt-1">{formatPrice(v.price)}</p>
                     </div>
                   </Card>
                 </Link>

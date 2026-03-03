@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useInView, useMotionValue, animate } from 'framer-motion';
 import { Button, Input, Select, Textarea, Card } from '@/components/ui';
 import { ScrollReveal, StaggerChildren, StaggerItem } from '@/components/motion';
-import { rentalPricing, rentalConditions } from '@/lib';
+import { rentalPricing } from '@/lib';
 import { formatPrice } from '@/utils';
 
 function PriceCountDown({ value, className }: { value: number; className?: string }) {
@@ -35,6 +35,8 @@ export function RentalContent() {
   const t = useTranslations('rental');
   const [submitted, setSubmitted] = useState(false);
 
+  const conditionKeys = ['condition_1', 'condition_2', 'condition_3', 'condition_4', 'condition_5', 'condition_6', 'condition_7'] as const;
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -56,14 +58,14 @@ export function RentalContent() {
     <div className="space-y-16">
       {/* Conditions */}
       <ScrollReveal>
-        <h3 className="text-2xl font-bold text-dk-gray-900 mb-6">{t('conditions_title')}</h3>
+        <h3 className="text-2xl font-bold text-dk-gray-900 dark:text-white mb-6">{t('conditions_title')}</h3>
         <ul className="space-y-3 max-w-2xl">
-          {rentalConditions.map((condition, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <svg className="w-5 h-5 text-dk-red-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          {conditionKeys.map((key) => (
+            <li key={key} className="flex items-start gap-3">
+              <svg className="w-5 h-5 text-dk-yellow-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="20 6 9 17 4 12"/>
               </svg>
-              <span className="text-dk-gray-600">{condition}</span>
+              <span className="text-dk-gray-600 dark:text-dk-gray-300">{t(key)}</span>
             </li>
           ))}
         </ul>
@@ -71,26 +73,26 @@ export function RentalContent() {
 
       {/* Pricing Table */}
       <ScrollReveal delay={0.2}>
-        <h3 className="text-2xl font-bold text-dk-gray-900 mb-6">{t('pricing_title')}</h3>
+        <h3 className="text-2xl font-bold text-dk-gray-900 dark:text-white mb-6">{t('pricing_title')}</h3>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[500px]">
             <thead>
-              <tr className="border-b-2 border-dk-gray-200">
-                <th className="text-left py-3 px-4 text-dk-gray-500 font-medium">{t('booking_type')}</th>
-                <th className="text-center py-3 px-4 text-dk-gray-500 font-medium">{t('hourly')}</th>
-                <th className="text-center py-3 px-4 text-dk-gray-500 font-medium">{t('daily')}</th>
-                <th className="text-center py-3 px-4 text-dk-gray-500 font-medium">{t('weekly')}</th>
-                <th className="text-center py-3 px-4 text-dk-gray-500 font-medium">{t('deposit')}</th>
+              <tr className="border-b-2 border-dk-gray-200 dark:border-dk-gray-700">
+                <th className="text-left py-3 px-4 text-dk-gray-500 dark:text-dk-gray-400 font-medium">{t('booking_type')}</th>
+                <th className="text-center py-3 px-4 text-dk-gray-500 dark:text-dk-gray-400 font-medium">{t('hourly')}</th>
+                <th className="text-center py-3 px-4 text-dk-gray-500 dark:text-dk-gray-400 font-medium">{t('daily')}</th>
+                <th className="text-center py-3 px-4 text-dk-gray-500 dark:text-dk-gray-400 font-medium">{t('weekly')}</th>
+                <th className="text-center py-3 px-4 text-dk-gray-500 dark:text-dk-gray-400 font-medium">{t('deposit')}</th>
               </tr>
             </thead>
             <tbody>
               {rentalPricing.map(p => (
-                <tr key={p.vehicleType} className="border-b border-dk-gray-100 hover:bg-dk-gray-50 transition-colors">
-                  <td className="py-4 px-4 font-semibold text-dk-gray-900">{p.label}</td>
-                  <td className="py-4 px-4 text-center text-dk-gray-700"><PriceCountDown value={p.hourly} /></td>
-                  <td className="py-4 px-4 text-center text-dk-gray-700"><PriceCountDown value={p.daily} /></td>
-                  <td className="py-4 px-4 text-center text-dk-gray-700"><PriceCountDown value={p.weekly} /></td>
-                  <td className="py-4 px-4 text-center text-dk-red-500 font-semibold"><PriceCountDown value={p.deposit} /></td>
+                <tr key={p.vehicleType} className="border-b border-dk-gray-100 dark:border-dk-gray-800 hover:bg-dk-gray-50 dark:hover:bg-dk-gray-800/50 transition-colors">
+                  <td className="py-4 px-4 font-semibold text-dk-gray-900 dark:text-white">{t(`type_${p.vehicleType}`)}</td>
+                  <td className="py-4 px-4 text-center text-dk-gray-700 dark:text-dk-gray-300"><PriceCountDown value={p.hourly} /></td>
+                  <td className="py-4 px-4 text-center text-dk-gray-700 dark:text-dk-gray-300"><PriceCountDown value={p.daily} /></td>
+                  <td className="py-4 px-4 text-center text-dk-gray-700 dark:text-dk-gray-300"><PriceCountDown value={p.weekly} /></td>
+                  <td className="py-4 px-4 text-center text-dk-yellow-500 font-semibold"><PriceCountDown value={p.deposit} /></td>
                 </tr>
               ))}
             </tbody>
@@ -101,11 +103,11 @@ export function RentalContent() {
       {/* Booking Form */}
       <ScrollReveal delay={0.3}>
         <Card className="max-w-2xl mx-auto p-6 sm:p-8">
-          <h3 className="text-2xl font-bold text-dk-gray-900 mb-6">{t('booking_title')}</h3>
+          <h3 className="text-2xl font-bold text-dk-gray-900 dark:text-white mb-6">{t('booking_title')}</h3>
           {submitted ? (
             <div className="text-center py-8">
               <div className="text-4xl mb-4">✅</div>
-              <p className="text-lg text-dk-gray-700">{t('booking_success')}</p>
+              <p className="text-lg text-dk-gray-700 dark:text-dk-gray-300">{t('booking_success')}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -118,10 +120,10 @@ export function RentalContent() {
                 name="vehicleType"
                 label={t('booking_type')}
                 options={[
-                  { value: 'atv', label: 'Квадроцикл' },
-                  { value: 'buggy', label: 'Багги' },
-                  { value: 'snowmobile', label: 'Снегоход' },
-                  { value: 'jetski', label: 'Водный мотоцикл' },
+                  { value: 'atv', label: t('select_atv') },
+                  { value: 'buggy', label: t('select_buggy') },
+                  { value: 'snowmobile', label: t('select_snowmobile') },
+                  { value: 'jetski', label: t('select_jetski') },
                 ]}
               />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

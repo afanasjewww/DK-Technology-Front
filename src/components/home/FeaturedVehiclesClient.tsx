@@ -27,7 +27,7 @@ export function FeaturedVehiclesClient({ vehicles }: Props) {
           <HoverScale>
             <Link href={`/catalog/${vehicle.slug}`}>
               <Card className="overflow-hidden group">
-                <div className="relative h-48 sm:h-56 bg-dk-gray-100 overflow-hidden">
+                <div className="relative h-48 sm:h-56 bg-dk-gray-100 dark:bg-dk-gray-800 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-dk-gray-900/40 to-transparent z-10" />
                   {randomImages[i] ? (
                     <Image
@@ -48,14 +48,14 @@ export function FeaturedVehiclesClient({ vehicles }: Props) {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-dk-gray-900 mb-1 group-hover:text-dk-red-500 transition-colors">
+                  <h3 className="text-lg font-bold text-dk-gray-900 dark:text-white mb-1 group-hover:text-dk-yellow-500 transition-colors">
                     {vehicle.name}
                   </h3>
-                  <p className="text-sm text-dk-gray-500 mb-3 line-clamp-2">
+                  <p className="text-sm text-dk-gray-500 dark:text-dk-gray-400 mb-3 line-clamp-2">
                     {randomDescriptions[i] || vehicle.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-dk-red-500">
+                    <span className="text-xl font-bold text-dk-yellow-500">
                       {formatPrice(vehicle.price)}
                     </span>
                     <span className="text-sm text-dk-gray-400">

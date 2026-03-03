@@ -28,7 +28,8 @@
       "snowmobile": "Snowmobiles",
       "snowmobile_desc": "Reliable machines for winter trails",
       "jetski": "Jet Skis",
-      "jetski_desc": "Speed and excitement on the water"
+      "jetski_desc": "Speed and excitement on the water",
+      "explore": "Explore"
     },
     "featured": {
       "title": "Popular Models",
@@ -111,12 +112,45 @@
     "booking_end": "End Date",
     "booking_message": "Message",
     "booking_submit": "Submit Request",
-    "booking_success": "Request submitted! We will contact you shortly."
+    "booking_success": "Request submitted! We will contact you shortly.",
+    "type_atv": "ATVs",
+    "type_buggy": "Buggies / UTVs",
+    "type_snowmobile": "Snowmobiles",
+    "type_jetski": "Jet Skis",
+    "condition_1": "Minimum renter age — 21 years",
+    "condition_2": "Valid driver's license (category A or B) required",
+    "condition_3": "Deposit is paid before receiving the vehicle",
+    "condition_4": "Full insurance is included in the rental price",
+    "condition_5": "Vehicle delivery in Moscow region — from 3,000 ₽",
+    "condition_6": "Driving instructions — free of charge",
+    "condition_7": "Free cancellation up to 24 hours before",
+    "select_atv": "ATV",
+    "select_buggy": "Buggy",
+    "select_snowmobile": "Snowmobile",
+    "select_jetski": "Jet Ski"
   },
   "service": {
     "title": "Service & Maintenance",
     "subtitle": "Professional care for your vehicle",
-    "cta": "Book a Service"
+    "cta": "Book a Service",
+    "s1_title": "Diagnostics",
+    "s1_desc": "Full computer diagnostics for BRP and Polaris vehicles. Fault detection and repair recommendations.",
+    "s1_price": "from 3,000 ₽",
+    "s2_title": "Scheduled Maintenance",
+    "s2_desc": "Routine maintenance per manufacturer guidelines. Oil and filter changes, full system inspection.",
+    "s2_price": "from 5,000 ₽",
+    "s3_title": "Engine Repair",
+    "s3_desc": "Major and minor repairs for Rotax and ProStar engines. Genuine OEM parts.",
+    "s3_price": "from 15,000 ₽",
+    "s4_title": "Chassis & Suspension",
+    "s4_desc": "Suspension, transmission, and brake system repair and replacement. Alignment and tuning.",
+    "s4_price": "from 8,000 ₽",
+    "s5_title": "Warranty Service",
+    "s5_desc": "Authorized warranty service for BRP and Polaris. All warranty repairs are free of charge.",
+    "s5_price": "Free",
+    "s6_title": "Parts & Accessories",
+    "s6_desc": "Genuine BRP and Polaris parts available to order. Nationwide delivery across Russia.",
+    "s6_price": "On request"
   },
   "contacts": {
     "title": "Contact Us",
@@ -132,7 +166,9 @@
     "form_subject": "Subject",
     "form_message": "Message",
     "form_submit": "Send",
-    "form_success": "Message sent! We will reply shortly."
+    "form_success": "Message sent! We will reply shortly.",
+    "address_value": "Saint Petersburg, 3rd Verkhny Lane, 5M",
+    "hours_value": "Mon-Fri: 9:00-20:00, Sat-Sun: 10:00-18:00"
   },
   "promotions": {
     "title": "Deals & Special Offers",
@@ -191,7 +227,7 @@
     "email": "Email"
   },
   "footer": {
-    "description": "DK Techno (ДК ТЕХНОЛОДЖИС, ООО) — Authorized BRP and Polaris dealer in Russia. Sales, rental, and service of powersports vehicles.",
+    "description": "DK Techno (ДК ТЕХНОЛОДЖИС, ООО) - Authorized BRP and Polaris dealer in Russia. Sales, rental, and service of powersports vehicles.",
     "navigation": "Navigation",
     "services": "Services",
     "contacts": "Contacts",

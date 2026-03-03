@@ -27,7 +27,7 @@ export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {
           className="fixed inset-0 z-40 lg:hidden"
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-dk-gray-950/95 backdrop-blur-lg" />
+          <div className="absolute inset-0 bg-white/95 dark:bg-dk-gray-950/95 backdrop-blur-lg transition-colors" />
 
           {/* Menu Content */}
           <motion.nav
@@ -52,8 +52,8 @@ export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {
                     className={cn(
                       'block w-full text-center py-3 px-6 text-lg font-medium rounded-xl transition-colors',
                       pathname === link.href
-                        ? 'text-dk-red-500 bg-dk-red-500/10'
-                        : 'text-white hover:bg-dk-gray-800'
+                        ? 'text-dk-yellow-600 bg-dk-yellow-500/10 dark:text-dk-yellow-500'
+                        : 'text-dk-gray-900 border border-transparent hover:border-dk-gray-200 hover:bg-dk-gray-50 dark:text-white dark:hover:border-dk-gray-800 dark:hover:bg-dk-gray-900'
                     )}
                   >
                     {t(link.key)}
@@ -71,7 +71,7 @@ export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {
                 <Link
                   href="/account"
                   onClick={onClose}
-                  className="block w-full text-center py-3 px-6 text-lg font-medium text-white hover:bg-dk-gray-800 rounded-xl transition-colors"
+                  className="block w-full text-center py-3 px-6 text-lg font-medium text-dk-gray-900 border border-transparent hover:border-dk-gray-200 hover:bg-dk-gray-50 dark:text-white dark:hover:border-dk-gray-800 dark:hover:bg-dk-gray-900 rounded-xl transition-colors"
                 >
                   {t('account')}
                 </Link>
@@ -87,11 +87,11 @@ export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {
             >
               <a
                 href={`tel:${CONTACT_INFO.phone.replace(/[\s\-\(\)]/g, '')}`}
-                className="text-lg text-dk-red-400 font-semibold hover:text-dk-red-300"
+                className="text-lg text-dk-yellow-600 dark:text-dk-yellow-500 font-semibold hover:opacity-80 transition-opacity"
               >
                 {CONTACT_INFO.phone}
               </a>
-              <p className="text-sm text-dk-gray-400">{CONTACT_INFO.workingHours}</p>
+              <p className="text-sm text-dk-gray-500 dark:text-dk-gray-400">{CONTACT_INFO.workingHours}</p>
             </motion.div>
           </motion.nav>
         </motion.div>
