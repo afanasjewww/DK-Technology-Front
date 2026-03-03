@@ -30,7 +30,7 @@ export function PromotionsContent() {
                 <div className="w-full h-full bg-gradient-to-br from-dk-yellow-500 to-dk-yellow-600" />
               )}
               <div className="absolute inset-0 bg-black/30" />
-              <Badge variant="red" className="absolute top-4 right-4 z-10">{promo.discount}</Badge>
+              <Badge variant="primary" className="absolute top-4 right-4 z-10">{promo.discount}</Badge>
             </div>
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-lg font-bold text-dk-gray-900 dark:text-white mb-2">{promo.title}</h3>

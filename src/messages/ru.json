@@ -16,7 +16,11 @@
       "title": "Мощные машины",
       "subtitle": "Продажа и аренда техники BRP и Polaris в России",
       "cta_catalog": "Каталог техники",
-      "cta_rental": "Арендовать"
+      "cta_rental": "Арендовать",
+      "stat_years": "лет опыта",
+      "stat_sold": "единиц продано",
+      "stat_clients": "клиентов",
+      "stat_centers": "сервис-центра"
     },
     "categories": {
       "title": "Категории техники",
@@ -82,7 +86,9 @@
     "specs": "Характеристики",
     "related": "Похожие модели",
     "all_types": "Все типы",
-    "all_brands": "Все бренды"
+    "all_brands": "Все бренды",
+    "rental_label": "Аренда:",
+    "rent_action": "Арендовать"
   },
   "about": {
     "title": "О компании",

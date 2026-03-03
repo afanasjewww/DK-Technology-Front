@@ -9,7 +9,7 @@ import { CONTACT_INFO } from '@/lib/constants';
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  navLinks: { key: string; href: string }[];
+  navLinks: readonly { key: string; href: string }[];
 }
 
 export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {

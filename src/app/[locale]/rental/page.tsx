@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('rental');
-  return { title: t('title') };
+  return { title: t('title'), description: t('subtitle') };
 }
 
 export default async function RentalPage({ params }: { params: Promise<{ locale: string }> }) {

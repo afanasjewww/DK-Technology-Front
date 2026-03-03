@@ -9,16 +9,7 @@ import { Container } from '@/components/ui';
 import { MobileMenu } from './MobileMenu';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
-import { CONTACT_INFO } from '@/lib/constants';
-
-const navLinks = [
-  { key: 'catalog', href: '/catalog' },
-  { key: 'rental', href: '/rental' },
-  { key: 'service', href: '/service' },
-  { key: 'about', href: '/about' },
-  { key: 'promotions', href: '/promotions' },
-  { key: 'contacts', href: '/contacts' },
-];
+import { CONTACT_INFO, HEADER_NAV_LINKS } from '@/lib/constants';
 
 export function HeaderClient() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -48,7 +39,7 @@ export function HeaderClient() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => (
+              {HEADER_NAV_LINKS.map((link) => (
                 <Link
                   key={link.key}
                   href={link.href}
@@ -117,7 +108,7 @@ export function HeaderClient() {
       <MobileMenu
         isOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
-        navLinks={navLinks}
+        navLinks={HEADER_NAV_LINKS}
       />
     </>
   );

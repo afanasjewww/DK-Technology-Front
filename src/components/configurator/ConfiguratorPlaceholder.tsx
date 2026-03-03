@@ -21,7 +21,7 @@ export function ConfiguratorPlaceholder() {
       <Container>
         <ScrollReveal>
           <div className="text-center mb-12">
-            <Badge variant="red" className="mb-4">{t('coming_soon')}</Badge>
+            <Badge variant="primary" className="mb-4">{t('coming_soon')}</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-dk-gray-900 mb-4">
               {t('title')}
             </h1>

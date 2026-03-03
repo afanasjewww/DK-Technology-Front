@@ -33,14 +33,6 @@ export const VEHICLE_DESCRIPTIONS = [
   'Стильный и современный дизайн в сочетании с передовыми технологиями. Лучший выбор сезона.',
 ];
 
-export function getRandomImage(): string {
-  return VEHICLE_PHOTOS[Math.floor(Math.random() * VEHICLE_PHOTOS.length)];
-}
-
-export function getRandomDescription(): string {
-  return VEHICLE_DESCRIPTIONS[Math.floor(Math.random() * VEHICLE_DESCRIPTIONS.length)];
-}
-
 export const vehicles: Vehicle[] = [
   {
     id: '1',

@@ -16,7 +16,11 @@
       "title": "Powerful Machines",
       "subtitle": "Sales and rental of BRP and Polaris vehicles in Russia",
       "cta_catalog": "View Catalog",
-      "cta_rental": "Rent Now"
+      "cta_rental": "Rent Now",
+      "stat_years": "years of experience",
+      "stat_sold": "vehicles sold",
+      "stat_clients": "clients",
+      "stat_centers": "service centers"
     },
     "categories": {
       "title": "Vehicle Categories",
@@ -82,7 +86,9 @@
     "specs": "Specifications",
     "related": "Related Models",
     "all_types": "All Types",
-    "all_brands": "All Brands"
+    "all_brands": "All Brands",
+    "rental_label": "Rental:",
+    "rent_action": "Rent"
   },
   "about": {
     "title": "About Us",

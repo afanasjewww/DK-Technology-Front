@@ -1,13 +1,10 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import { Card, Badge, Button } from '@/components/ui';
-import { StaggerChildren, StaggerItem, HoverScale } from '@/components/motion';
-import { formatPrice, cn } from '@/utils';
-import { BRAND_LABELS } from '@/lib/constants';
+import { Button, VehicleCard } from '@/components/ui';
+import { StaggerChildren, StaggerItem } from '@/components/motion';
+import { cn } from '@/utils';
 import { useRandomImages, useRandomDescriptions } from '@/hooks/useRandomContent';
 import type { Vehicle, VehicleType, VehicleBrand } from '@/types';
 
@@ -89,37 +86,11 @@ export function CatalogClient({ vehicles }: { vehicles: Vehicle[] }) {
             const idx = vehicles.findIndex(v => v.id === vehicle.id);
             return (
             <StaggerItem key={vehicle.id}>
-              <HoverScale>
-                <Link href={`/catalog/${vehicle.slug}`}>
-                  <Card className="group">
-                    <div className="relative h-48 bg-dk-gray-100 dark:bg-dk-gray-800 overflow-hidden">
-                      {randomImages[idx] ? (
-                        <Image
-                          src={randomImages[idx]}
-                          alt={vehicle.name}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-dk-gray-200" />
-                      )}
-                      <div className="absolute top-3 left-3 flex gap-2 z-10">
-                        <Badge>{BRAND_LABELS[vehicle.brand]}</Badge>
-                        {vehicle.isRentable && <Badge variant="green">{t('rent_available')}</Badge>}
-                      </div>
-                    </div>
-                    <div className="p-5">
-                      <h3 className="font-bold text-dk-gray-900 dark:text-white group-hover:text-dk-yellow-500 transition-colors mb-1">{vehicle.name}</h3>
-                      <p className="text-sm text-dk-gray-500 dark:text-dk-gray-400 line-clamp-2 mb-3">{randomDescriptions[idx] || vehicle.description}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xl font-bold text-dk-yellow-500">{formatPrice(vehicle.price)}</span>
-                        <span className="text-sm text-dk-gray-400">{vehicle.year}</span>
-                      </div>
-                    </div>
-                  </Card>
-                </Link>
-              </HoverScale>
+              <VehicleCard
+                vehicle={vehicle}
+                image={randomImages[idx]}
+                description={randomDescriptions[idx]}
+              />
             </StaggerItem>
           );
           })}

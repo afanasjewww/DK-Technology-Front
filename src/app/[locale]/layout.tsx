@@ -2,7 +2,6 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import localFont from 'next/font/local';
-import { Rajdhani } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { Header, Footer, CookieConsent, FloatingContacts } from '@/components/layout';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -13,9 +12,12 @@ const inter = localFont({
   display: 'swap',
 });
 
-const rajdhani = Rajdhani({
-  weight: ['500', '600', '700'],
-  subsets: ['latin'],
+const rajdhani = localFont({
+  src: [
+    { path: '../../../public/fonts/Rajdhani-Medium.ttf', weight: '500' },
+    { path: '../../../public/fonts/Rajdhani-SemiBold.ttf', weight: '600' },
+    { path: '../../../public/fonts/Rajdhani-Bold.ttf', weight: '700' },
+  ],
   variable: '--font-rajdhani',
   display: 'swap',
 });

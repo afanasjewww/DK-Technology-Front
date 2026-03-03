@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { useInView, useMotionValue, animate } from 'framer-motion';
+import { useFormSubmit } from '@/hooks/useFormSubmit';
 import { Button, Input, Select, Textarea, Card } from '@/components/ui';
 import { ScrollReveal, StaggerChildren, StaggerItem } from '@/components/motion';
 import { rentalPricing } from '@/lib';
@@ -33,26 +34,9 @@ function PriceCountDown({ value, className }: { value: number; className?: strin
 
 export function RentalContent() {
   const t = useTranslations('rental');
-  const [submitted, setSubmitted] = useState(false);
+  const { submitted, handleSubmit } = useFormSubmit('/api/rental');
 
   const conditionKeys = ['condition_1', 'condition_2', 'condition_3', 'condition_4', 'condition_5', 'condition_6', 'condition_7'] as const;
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData);
-
-    try {
-      await fetch('/api/rental', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      setSubmitted(true);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   return (
     <div className="space-y-16">

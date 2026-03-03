@@ -123,10 +123,10 @@ export function HeroSection() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl border-t border-dk-gray-800 pt-8"
         >
           {[
-            { value: '10+', label: 'лет опыта' },
-            { value: '500+', label: 'единиц продано' },
-            { value: '2000+', label: 'клиентов' },
-            { value: '3', label: 'сервис-центра' },
+            { value: '10+', label: t('stat_years') },
+            { value: '500+', label: t('stat_sold') },
+            { value: '2000+', label: t('stat_clients') },
+            { value: '3', label: t('stat_centers') },
           ].map((stat, i) => (
             <div key={i} className="text-left">
               <div className="text-3xl sm:text-4xl font-black text-dk-yellow-500">{stat.value}</div>

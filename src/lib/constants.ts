@@ -25,6 +25,29 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'nav.contacts', href: '/contacts' },
 ];
 
+export const HEADER_NAV_LINKS = [
+  { key: 'catalog', href: '/catalog' },
+  { key: 'rental', href: '/rental' },
+  { key: 'service', href: '/service' },
+  { key: 'about', href: '/about' },
+  { key: 'promotions', href: '/promotions' },
+  { key: 'contacts', href: '/contacts' },
+] as const;
+
+export const FOOTER_NAV_LINKS = [
+  { key: 'home', href: '/' },
+  { key: 'catalog', href: '/catalog' },
+  { key: 'rental', href: '/rental' },
+  { key: 'about', href: '/about' },
+] as const;
+
+export const FOOTER_SERVICE_LINKS = [
+  { key: 'service', href: '/service' },
+  { key: 'promotions', href: '/promotions' },
+  { key: 'configurator', href: '/configurator' },
+  { key: 'contacts', href: '/contacts' },
+] as const;
+
 export const VEHICLE_TYPE_LABELS: Record<string, { ru: string; en: string }> = {
   atv: { ru: 'Квадроциклы', en: 'ATVs' },
   buggy: { ru: 'Багги', en: 'Buggies' },

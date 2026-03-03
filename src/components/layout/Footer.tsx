@@ -1,25 +1,14 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Container } from '@/components/ui';
-import { CONTACT_INFO } from '@/lib/constants';
+import { CONTACT_INFO, FOOTER_NAV_LINKS, FOOTER_SERVICE_LINKS } from '@/lib/constants';
 
 export async function Footer() {
   const t = await getTranslations('footer');
   const tNav = await getTranslations('nav');
 
-  const navLinks = [
-    { label: tNav('home'), href: '/' },
-    { label: tNav('catalog'), href: '/catalog' },
-    { label: tNav('rental'), href: '/rental' },
-    { label: tNav('about'), href: '/about' },
-  ];
-
-  const serviceLinks = [
-    { label: tNav('service'), href: '/service' },
-    { label: tNav('promotions'), href: '/promotions' },
-    { label: tNav('configurator'), href: '/configurator' },
-    { label: tNav('contacts'), href: '/contacts' },
-  ];
+  const navLinks = FOOTER_NAV_LINKS.map(link => ({ label: tNav(link.key), href: link.href }));
+  const serviceLinks = FOOTER_SERVICE_LINKS.map(link => ({ label: tNav(link.key), href: link.href }));
 
   return (
     <footer className="bg-dk-gray-50 dark:bg-dk-gray-950 text-dk-gray-700 dark:text-dk-gray-300 border-t border-dk-gray-200 dark:border-dk-gray-800 transition-colors duration-300">
